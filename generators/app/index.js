@@ -67,9 +67,10 @@ module.exports = yeoman.Base.extend({
     );
   },
   _writingGulp: function () {
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath('gulpfile.js'),
-      this.destinationPath('gulpfile.js')
+      this.destinationPath('gulpfile.js'),
+      this.props
     );
   },
   _writingPackageJson: function () {
@@ -120,7 +121,10 @@ module.exports = yeoman.Base.extend({
   },
   install: function () {
     //this.installDependencies();
-    console.log('Running npm install & bower install for you to install the required dependencies. If this fails, try running the command yourself.');
+    this.log(
+      'Running npm install & bower install for you to install the required dependencies. ' +
+      'If this fails, try running the command yourself.'
+    );
   },
   end: function () {
     this.log('Well done! Start your work! :)');
