@@ -13,6 +13,11 @@ module.exports = yeoman.Base.extend({
     ));
     var prompts = [{
       type: 'input',
+      name: 'namespace',
+      message: 'Your namespace name?',
+      default: 'nx.widget'
+    }, {
+      type: 'input',
       name: 'module_name',
       message: 'Your module name?',
       default: path.basename(process.cwd())
@@ -41,9 +46,10 @@ module.exports = yeoman.Base.extend({
     this._writingBowerJson();
   },
   _writingJsMan: function () {
-    this.fs.copy(
+    this.fs.copyTpl(
       this.templatePath('./src/angular/main.js'),
-      this.destinationPath('./src/angular/main.js')
+      this.destinationPath('./src/angular/main.js'),
+      this.props
     );
   },
   _writingJsDirectiveTemplate: function () {

@@ -1,6 +1,6 @@
 (function () {
   'use strict';
 
-  angular.module('nx.widget', []);
+  angular.module('<%= namespace %>', []);
 
 })();
