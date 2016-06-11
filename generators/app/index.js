@@ -126,11 +126,7 @@ module.exports = yeoman.Base.extend({
     });
   },
   install: function () {
-    //this.installDependencies();
-    this.log(
-      'Running npm install & bower install for you to install the required dependencies. ' +
-      'If this fails, try running the command yourself.'
-    );
+    this.installDependencies();
   },
   end: function () {
     this.log('Well done! Start your work! :)');
