@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('nx.widget')
-    .directive('nxNumberSpinner', [function ($scope) {
+    .directive('<%= nxModuleName %>', ['$scope', function ($scope) {
       return {
         restrict: 'E',
         scope: {
@@ -22,7 +22,7 @@
             $scope.value--;
           }
         }],
-        template: '<div class="nx-widget-number-spinner {{cssClass}}">' +
+        template: '<div class="nx-widget-<%= module_name %> {{cssClass}}">' +
         '<button class="btn plus" ng-click="plus()">+</button>' +
         '<input class="value" ng-model="value" type="tel">' +
         '<button class="btn minus" ng-click="minus()">-</button>' +
