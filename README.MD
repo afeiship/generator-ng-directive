@@ -5,3 +5,7 @@
 + npm install `generator-ng-directive` -g
 + yo ng-directive
 + You can build your own AngularJS directive.
+
+
+##issues:
++ need keywords options[Array|Uniq]
