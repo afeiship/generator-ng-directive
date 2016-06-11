@@ -13,7 +13,12 @@
   ],
   "main": "generators/index.js",
   "keywords": [
-    "generator angular directive ng next nx",
+    "generator",
+    "angular",
+    "directive",
+    "ng",
+    "next",
+    "nx",
     "yeoman-generator"
   ],
   "dependencies": {
