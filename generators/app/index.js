@@ -23,6 +23,11 @@ module.exports = yeoman.Base.extend({
       default: path.basename(process.cwd())
     }, {
       type: 'input',
+      name: 'keywords',
+      message: 'Your directive keywords?',
+      default: "angular"
+    }, {
+      type: 'input',
       name: 'description',
       message: 'Your description?'
     }];
@@ -118,6 +123,15 @@ module.exports = yeoman.Base.extend({
     _.each(props, function (prop, key) {
       this.props[this._nxCamelCase(key)] = this._nxCamelCase(prop);
     }, this);
+    this._processKeywords();
+  },
+  _processKeywords: function () {
+    var keywords = this.props['keywords'];
+    var arrayKeywords = keywords.split(/\s+/);
+    var quoteKeywords = arrayKeywords.map(function (item) {
+      return '"' + item + '"';
+    });
+    this.props['arrayKeywords'] = '[' + quoteKeywords.join(',') + ']';
   },
   _nxCamelCase: function (inString) {
     var string = 'nx-' + inString;
@@ -126,7 +140,8 @@ module.exports = yeoman.Base.extend({
     });
   },
   install: function () {
-    this.installDependencies();
+    console.log('bower install && npm install');
+    //this.installDependencies();
   },
   end: function () {
     this.log('Well done! Start your work! :)');

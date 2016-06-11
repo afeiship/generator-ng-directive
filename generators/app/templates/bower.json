@@ -11,10 +11,7 @@
     "afei"
   ],
   "license": "MIT",
-  "keywords": [
-    "<%= module_name %>",
-    "angular"
-  ],
+  "keywords": <%- arrayKeywords %>,
   "homepage": "https://github.com/afeiship/angular-<%= module_name %>",
   "moduleType": [
     "amd"

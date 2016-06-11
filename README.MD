@@ -8,4 +8,4 @@
 
 
 ##issues:
-+ need keywords options[Array|Uniq]
++ need keywords options[Array|Uniq] [50% done!]
