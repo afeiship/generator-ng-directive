@@ -46,6 +46,7 @@ module.exports = yeoman.Base.extend({
     this._rewriteProps();
     this._writingJsMan();
     this._writingJsDirectiveTemplate();
+    this._writingJsServiceTemplate();
     this._writingSassTemplate();
     this._writingLicense();
     this._writingGulp();
@@ -67,6 +68,13 @@ module.exports = yeoman.Base.extend({
     this.fs.copyTpl(
       this.templatePath('./src/angular/directive/template.js'),
       this.destinationPath('./src/angular/directive/' + this._module_name + '.js'),
+      this.props
+    );
+  },
+  _writingJsServiceTemplate: function () {
+    this.fs.copyTpl(
+      this.templatePath('./src/angular/service/template.js'),
+      this.destinationPath('./src/angular/service/' + this._module_name + '.js'),
       this.props
     );
   },

@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('nx.widget')
+  angular.module('<%= namespace %>')
     .directive('<%= nxModuleName %>', ['$scope', function ($scope) {
       return {
         restrict: 'E',
