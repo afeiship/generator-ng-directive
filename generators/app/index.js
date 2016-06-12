@@ -54,6 +54,7 @@ module.exports = yeoman.Base.extend({
     this._writingEditorConfig();
     this._writingGitIgnore();
     this._writingBowerJson();
+    this._writingTest();
   },
   _writingJsMan: function () {
     this.fs.copyTpl(
@@ -119,6 +120,13 @@ module.exports = yeoman.Base.extend({
     this.fs.copyTpl(
       this.templatePath('bower.json'),
       this.destinationPath('bower.json'),
+      this.props
+    );
+  },
+  _writingTest: function () {
+    this.fs.copyTpl(
+      this.templatePath('./test/test.html'),
+      this.destinationPath('./test/test.html'),
       this.props
     );
   },
