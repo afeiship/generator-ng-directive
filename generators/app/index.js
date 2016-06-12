@@ -20,7 +20,12 @@ module.exports = yeoman.Base.extend({
       type: 'input',
       name: 'module_name',
       message: 'Your module name?',
-      default: path.basename(process.cwd())
+      default: function () {
+        var cwd = path.basename(process.cwd());
+        var result = cwd.split(/[-_]/);
+        result.shift();
+        return result.join('-');
+      }
     }, {
       type: 'input',
       name: 'keywords',
