@@ -44,7 +44,7 @@ module.exports = yeoman.Base.extend({
 
   writing: function () {
     this._rewriteProps();
-    this._writingJsMan();
+    this._writingJsMain();
     this._writingJsDirectiveTemplate();
     this._writingJsServiceTemplate();
     this._writingSassTemplate();
@@ -57,7 +57,7 @@ module.exports = yeoman.Base.extend({
     this._writingBowerJson();
     this._writingTest();
   },
-  _writingJsMan: function () {
+  _writingJsMain: function () {
     this.fs.copyTpl(
       this.templatePath('./src/angular/main.js'),
       this.destinationPath('./src/angular/main.js'),
