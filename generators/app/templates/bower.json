@@ -3,9 +3,7 @@
   "description": "<%= description %>",
   "main": [
     "dist/css/angular-<%= module_name %>.css",
-    "dist/css/angular-<%= module_name %>.min.css",
-    "dist/js/angular-<%= module_name %>.js",
-    "dist/js/angular-<%= module_name %>.min.js"
+    "dist/js/angular-<%= module_name %>.js"
   ],
   "authors": [
     "afei"
