@@ -2,7 +2,7 @@
   "name": "angular-<%= module_name %>",
   "description": "<%= description %>",
   "main": [
-    "dist/css/angular-<%= module_name %>.css",
+    "dist/css/<%= module_name %>.css",
     "dist/js/angular-<%= module_name %>.js"
   ],
   "authors": [
