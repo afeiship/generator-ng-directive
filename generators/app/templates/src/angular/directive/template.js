@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('<%= namespace %>')
-    .directive('<%= nxModuleName %>', function () {
+    .directive('<%= nxModuleName %>', ['$timeout',function ($timeout) {
       return {
         restrict: 'E',
         scope: {
@@ -29,7 +29,7 @@
         '</div>'
       };
 
-    });
+    }]);
 
 
 })();
