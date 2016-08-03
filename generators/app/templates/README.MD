@@ -2,7 +2,7 @@
 <%= description %>
 
 ##usage:
-+ bower install `afeiship/angular-<%= module_name %>`
++ bower install `afeiship/angular-<%= module_name %> --save`
 
 
 

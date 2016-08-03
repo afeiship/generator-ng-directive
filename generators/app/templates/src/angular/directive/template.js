@@ -9,6 +9,9 @@
           cssClass: '@',
           value: '='
         },
+        link:function(scope,elem,attrs,vm){
+          //code goes herer!
+        },
         controller: ['$scope', function ($scope) {
           $scope.plus = plus;
           $scope.minus = minus;
