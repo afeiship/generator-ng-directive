@@ -28,7 +28,8 @@ var config = {
 var scripts = [
   './src/angular/main.js',
   './src/angular/directive/<%= module_name %>.js',
-  './src/angular/service/<%= module_name %>.js'
+  './src/angular/service/<%= module_name %>.js',
+  './src/angular/filter/<%= module_name %>.js'
 ];
 
 
