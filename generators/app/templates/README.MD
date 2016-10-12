@@ -1,5 +1,5 @@
 #angular-<%= module_name %>
-<%= description %>
+> <%= description %>
 
 ##usage:
 + bower install `afeiship/angular-<%= module_name %> --save`
